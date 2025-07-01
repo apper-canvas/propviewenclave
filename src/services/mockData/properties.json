@@ -1,0 +1,352 @@
+{
+  "properties": [
+    {
+      "Id": 1,
+      "title": "Luxury Modern Villa with Ocean Views",
+      "price": 2850000,
+      "address": {
+        "street": "123 Oceanview Drive",
+        "city": "Malibu",
+        "state": "CA",
+        "zipCode": "90265"
+      },
+      "coordinates": {
+        "lat": 34.0259,
+        "lng": -118.7798
+      },
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "squareFeet": 4200,
+      "propertyType": "Villa",
+      "images": [
+        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop"
+      ],
+      "description": "Stunning contemporary villa perched on the cliffs of Malibu with breathtaking ocean views. This architectural masterpiece features floor-to-ceiling windows, an infinity pool, and premium finishes throughout. The open-concept living space flows seamlessly to expansive outdoor terraces perfect for entertaining.",
+      "amenities": ["Pool", "Ocean View", "Fireplace", "Garden", "Balcony", "Gym", "Wine Cellar"],
+      "yearBuilt": 2018,
+      "listingDate": "2024-01-15T10:00:00Z"
+    },
+    {
+      "Id": 2,
+      "title": "Downtown Luxury Penthouse",
+      "price": 1950000,
+      "address": {
+        "street": "456 Metropolitan Avenue",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zipCode": "90014"
+      },
+      "coordinates": {
+        "lat": 34.0522,
+        "lng": -118.2437
+      },
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "squareFeet": 2800,
+      "propertyType": "Condo",
+      "images": [
+        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop"
+      ],
+      "description": "Exceptional penthouse in the heart of downtown LA featuring panoramic city views from every room. This ultra-modern residence boasts high-end appliances, marble countertops, and a private rooftop terrace. Building amenities include concierge service, fitness center, and rooftop pool.",
+      "amenities": ["City View", "Rooftop Terrace", "Concierge", "Gym", "Pool", "Elevator", "Parking"],
+      "yearBuilt": 2020,
+      "listingDate": "2024-01-20T14:30:00Z"
+    },
+    {
+      "Id": 3,
+      "title": "Charming Craftsman Bungalow",
+      "price": 875000,
+      "address": {
+        "street": "789 Elm Street",
+        "city": "Pasadena",
+        "state": "CA",
+        "zipCode": "91101"
+      },
+      "coordinates": {
+        "lat": 34.1478,
+        "lng": -118.1445
+      },
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "squareFeet": 1850,
+      "propertyType": "House",
+      "images": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=600&fit=crop"
+      ],
+      "description": "Beautifully restored 1920s Craftsman bungalow in historic Pasadena. Original hardwood floors, built-in cabinetry, and period details blend seamlessly with modern updates. The private backyard features mature landscaping and a charming garden perfect for relaxation.",
+      "amenities": ["Garden", "Fireplace", "Hardwood Floors", "Parking", "Patio"],
+      "yearBuilt": 1925,
+      "listingDate": "2024-01-25T09:15:00Z"
+    },
+    {
+      "Id": 4,
+      "title": "Modern Architectural Masterpiece",
+      "price": 3200000,
+      "address": {
+        "street": "321 Hillcrest Drive",
+        "city": "Beverly Hills",
+        "state": "CA",
+        "zipCode": "90210"
+      },
+      "coordinates": {
+        "lat": 34.0736,
+        "lng": -118.4004
+      },
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "squareFeet": 3800,
+      "propertyType": "House",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop"
+      ],
+      "description": "Striking contemporary home designed by renowned architect featuring clean lines, walls of glass, and sophisticated interior spaces. The property includes a resort-style pool, outdoor kitchen, and meticulously landscaped grounds. Perfect for luxury living and grand entertaining.",
+      "amenities": ["Pool", "Outdoor Kitchen", "Gym", "Wine Cellar", "Garden", "Parking", "Security System"],
+      "yearBuilt": 2019,
+      "listingDate": "2024-02-01T11:45:00Z"
+    },
+    {
+      "Id": 5,
+      "title": "Cozy Mountain Cabin Retreat",
+      "price": 425000,
+      "address": {
+        "street": "654 Pine Ridge Road",
+        "city": "Big Bear",
+        "state": "CA",
+        "zipCode": "92315"
+      },
+      "coordinates": {
+        "lat": 34.2439,
+        "lng": -116.9114
+      },
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "squareFeet": 1200,
+      "propertyType": "House",
+      "images": [
+        "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1542718610-a1d656d1884c?w=800&h=600&fit=crop"
+      ],
+      "description": "Charming mountain cabin nestled among towering pines with stunning forest views. This peaceful retreat features a stone fireplace, vaulted ceilings, and a wraparound deck perfect for morning coffee or evening relaxation. Ideal for weekend getaways or year-round mountain living.",
+      "amenities": ["Fireplace", "Forest View", "Deck", "Parking", "Garden"],
+      "yearBuilt": 1995,
+      "listingDate": "2024-02-05T08:20:00Z"
+    },
+    {
+      "Id": 6,
+      "title": "Elegant Victorian Mansion",
+      "price": 1750000,
+      "address": {
+        "street": "987 Heritage Lane",
+        "city": "San Francisco",
+        "state": "CA",
+        "zipCode": "94117"
+      },
+      "coordinates": {
+        "lat": 37.7749,
+        "lng": -122.4194
+      },
+      "bedrooms": 6,
+      "bathrooms": 4,
+      "squareFeet": 3500,
+      "propertyType": "House",
+      "images": [
+        "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1571939228382-b2f2b585ce15?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop"
+      ],
+      "description": "Magnificent Victorian mansion meticulously restored to its original grandeur while incorporating modern amenities. Features ornate woodwork, stained glass windows, and period details throughout. The property includes a formal garden, carriage house, and stunning city views.",
+      "amenities": ["Garden", "Fireplace", "Bay View", "Parking", "Balcony", "Wine Cellar"],
+      "yearBuilt": 1890,
+      "listingDate": "2024-02-10T13:10:00Z"
+    },
+    {
+      "Id": 7,
+      "title": "Luxury Beachfront Apartment",
+      "price": 1250000,
+      "address": {
+        "street": "159 Ocean Boulevard",
+        "city": "Santa Monica",
+        "state": "CA",
+        "zipCode": "90401"
+      },
+      "coordinates": {
+        "lat": 34.0195,
+        "lng": -118.4912
+      },
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "squareFeet": 1600,
+      "propertyType": "Apartment",
+      "images": [
+        "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1515263487990-61b07816b364?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1520637836862-4d197d17c90a?w=800&h=600&fit=crop"
+      ],
+      "description": "Stunning beachfront apartment with direct ocean access and panoramic views of the Pacific. This contemporary unit features floor-to-ceiling windows, premium finishes, and a private balcony overlooking the beach. Steps from Santa Monica Pier and world-class dining.",
+      "amenities": ["Ocean View", "Balcony", "Pool", "Gym", "Concierge", "Elevator", "Parking"],
+      "yearBuilt": 2015,
+      "listingDate": "2024-02-12T16:40:00Z"
+    },
+    {
+      "Id": 8,
+      "title": "Contemporary Townhouse in Arts District",
+      "price": 950000,
+      "address": {
+        "street": "753 Industrial Street",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zipCode": "90013"
+      },
+      "coordinates": {
+        "lat": 34.0394,
+        "lng": -118.2348
+      },
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "squareFeet": 2200,
+      "propertyType": "Townhouse",
+      "images": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600563438938-a42d2627c4ef?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566752229-450a4fe74397?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=800&h=600&fit=crop"
+      ],
+      "description": "Stylish modern townhouse in the vibrant Arts District featuring an open floor plan, exposed brick walls, and industrial-chic design elements. The property includes a private rooftop deck with city views, perfect for entertaining. Walking distance to trendy restaurants and galleries.",
+      "amenities": ["Rooftop Deck", "City View", "Exposed Brick", "Parking", "Fireplace"],
+      "yearBuilt": 2017,
+      "listingDate": "2024-02-15T10:25:00Z"
+    },
+    {
+      "Id": 9,
+      "title": "Spanish Colonial Revival Estate",
+      "price": 2400000,
+      "address": {
+        "street": "842 Hacienda Drive",
+        "city": "Montecito",
+        "state": "CA",
+        "zipCode": "93108"
+      },
+      "coordinates": {
+        "lat": 34.4359,
+        "lng": -119.6376
+      },
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "squareFeet": 4000,
+      "propertyType": "House",
+      "images": [
+        "https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600298882974-7e1d5e6e5a87?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600298883034-5e5e7e8d7c50?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600298883164-2e5e7e8d7c50?w=800&h=600&fit=crop"
+      ],
+      "description": "Magnificent Spanish Colonial Revival estate set on manicured grounds with mountain and ocean views. Features authentic architectural details including hand-painted tiles, wrought iron work, and beamed ceilings. The property includes a guest house, pool, and expansive gardens.",
+      "amenities": ["Pool", "Guest House", "Garden", "Mountain View", "Ocean View", "Fireplace", "Wine Cellar"],
+      "yearBuilt": 1928,
+      "listingDate": "2024-02-18T14:15:00Z"
+    },
+    {
+      "Id": 10,
+      "title": "Modern Loft in Historic Building",
+      "price": 725000,
+      "address": {
+        "street": "234 Warehouse Row",
+        "city": "San Diego",
+        "state": "CA",
+        "zipCode": "92101"
+      },
+      "coordinates": {
+        "lat": 32.7157,
+        "lng": -117.1611
+      },
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "squareFeet": 1800,
+      "propertyType": "Condo",
+      "images": [
+        "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566752432-7f3e1e9c1a0c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566752518-2e5e7e8d7c50?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566752598-3e5e7e8d7c50?w=800&h=600&fit=crop"
+      ],
+      "description": "Unique industrial loft in a converted historic warehouse featuring soaring ceilings, exposed brick, and steel beam construction. The open concept design maximizes space and natural light, while modern amenities provide contemporary comfort. Located in the heart of downtown San Diego.",
+      "amenities": ["Exposed Brick", "High Ceilings", "City View", "Parking", "Elevator", "Gym"],
+      "yearBuilt": 2016,
+      "listingDate": "2024-02-20T12:50:00Z"
+    },
+    {
+      "Id": 11,
+      "title": "Waterfront Mediterranean Villa",
+      "price": 4200000,
+      "address": {
+        "street": "567 Bayfront Terrace",
+        "city": "Newport Beach",
+        "state": "CA",
+        "zipCode": "92660"
+      },
+      "coordinates": {
+        "lat": 33.6189,
+        "lng": -117.9298
+      },
+      "bedrooms": 6,
+      "bathrooms": 5,
+      "squareFeet": 5200,
+      "propertyType": "Villa",
+      "images": [
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600585154622-990dced4db0d?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600585154718-990dced4db0d?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600585154814-990dced4db0d?w=800&h=600&fit=crop"
+      ],
+      "description": "Spectacular Mediterranean villa situated on the waterfront with private dock and panoramic bay views. This luxury residence features imported stone, custom millwork, and the finest materials throughout. The property includes a wine cellar, home theater, and resort-style amenities.",
+      "amenities": ["Private Dock", "Bay View", "Wine Cellar", "Home Theater", "Pool", "Gym", "Guest House"],
+      "yearBuilt": 2021,
+      "listingDate": "2024-02-22T09:30:00Z"
+    },
+    {
+      "Id": 12,
+      "title": "Minimalist Desert Retreat",
+      "price": 675000,
+      "address": {
+        "street": "888 Desert Vista Way",
+        "city": "Palm Springs",
+        "state": "CA",
+        "zipCode": "92262"
+      },
+      "coordinates": {
+        "lat": 33.8303,
+        "lng": -116.5453
+      },
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "squareFeet": 1500,
+      "propertyType": "House",
+      "images": [
+        "https://images.unsplash.com/photo-1600566752806-35792bedcfea?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566752902-35792bedcfea?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566752998-35792bedcfea?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566753094-35792bedcfea?w=800&h=600&fit=crop"
+      ],
+      "description": "Serene minimalist retreat in the desert featuring clean lines, natural materials, and stunning mountain views. The design emphasizes indoor-outdoor living with sliding glass walls that open to the pool and desert landscape. A perfect sanctuary for relaxation and contemplation.",
+      "amenities": ["Pool", "Mountain View", "Desert View", "Fireplace", "Patio", "Garden"],
+      "yearBuilt": 2020,
+      "listingDate": "2024-02-25T15:45:00Z"
+    }
+  ]
+}
