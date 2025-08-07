@@ -115,17 +115,21 @@ const PropertyDetail = () => {
           <div className="flex items-start justify-between">
             <div>
               <div className="flex items-center space-x-3 mb-2">
-                <h1 className="text-3xl font-display font-bold text-gray-900">
-                  {property.title}
+<h1 className="text-3xl font-display font-bold text-gray-900">
+                  {property.title_c}
                 </h1>
-                <Badge variant="primary">{property.propertyType}</Badge>
+                <Badge variant="primary">{property.propertyType_c}</Badge>
               </div>
               <div className="flex items-center text-gray-600 mb-4">
                 <ApperIcon name="MapPin" size={16} className="mr-2" />
-                <span>{property.address.street}, {property.address.city}, {property.address.state} {property.address.zipCode}</span>
+                <span>
+                  {typeof property.address_c === 'object' 
+                    ? `${property.address_c.street}, ${property.address_c.city}, ${property.address_c.state} ${property.address_c.zipCode}`
+                    : property.address_c}
+                </span>
               </div>
               <div className="text-4xl font-display font-bold text-primary">
-                {formatPrice(property.price)}
+                {formatPrice(property.price_c)}
               </div>
             </div>
             
@@ -149,7 +153,7 @@ const PropertyDetail = () => {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-2">
                   <ApperIcon name="Bed" className="text-primary" size={24} />
                 </div>
-                <div className="text-2xl font-bold text-gray-900">{property.bedrooms}</div>
+<div className="text-2xl font-bold text-gray-900">{property.bedrooms_c}</div>
                 <div className="text-sm text-gray-600">Bedrooms</div>
               </div>
               
@@ -157,7 +161,7 @@ const PropertyDetail = () => {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-2">
                   <ApperIcon name="Bath" className="text-primary" size={24} />
                 </div>
-                <div className="text-2xl font-bold text-gray-900">{property.bathrooms}</div>
+                <div className="text-2xl font-bold text-gray-900">{property.bathrooms_c}</div>
                 <div className="text-sm text-gray-600">Bathrooms</div>
               </div>
               
@@ -165,7 +169,7 @@ const PropertyDetail = () => {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-2">
                   <ApperIcon name="Square" className="text-primary" size={24} />
                 </div>
-                <div className="text-2xl font-bold text-gray-900">{property.squareFeet.toLocaleString()}</div>
+                <div className="text-2xl font-bold text-gray-900">{property.squareFeet_c?.toLocaleString()}</div>
                 <div className="text-sm text-gray-600">Square Feet</div>
               </div>
               
@@ -173,7 +177,7 @@ const PropertyDetail = () => {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-2">
                   <ApperIcon name="Calendar" className="text-primary" size={24} />
                 </div>
-                <div className="text-2xl font-bold text-gray-900">{property.yearBuilt}</div>
+                <div className="text-2xl font-bold text-gray-900">{property.yearBuilt_c}</div>
                 <div className="text-sm text-gray-600">Year Built</div>
               </div>
             </div>
@@ -184,8 +188,8 @@ const PropertyDetail = () => {
             <h2 className="text-xl font-display font-semibold text-gray-900 mb-4">
               Description
             </h2>
-            <p className="text-gray-700 leading-relaxed">
-              {property.description}
+<p className="text-gray-700 leading-relaxed">
+              {property.description_c}
             </p>
           </Card>
           
@@ -194,8 +198,13 @@ const PropertyDetail = () => {
             <h2 className="text-xl font-display font-semibold text-gray-900 mb-4">
               Amenities
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-              {property.amenities.map(amenity => (
+<div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {(typeof property.amenities_c === 'string' 
+                ? property.amenities_c.split(',').map(a => a.trim())
+                : Array.isArray(property.amenities_c) 
+                ? property.amenities_c 
+                : []
+              ).map(amenity => (
                 <div key={amenity} className="flex items-center space-x-2">
                   <ApperIcon name="Check" className="text-success" size={16} />
                   <span className="text-gray-700">{amenity}</span>
@@ -235,27 +244,27 @@ const PropertyDetail = () => {
             </h3>
             <div className="space-y-3">
               <div className="flex justify-between">
-                <span className="text-gray-600">Property Type</span>
-                <span className="text-gray-900 font-medium">{property.propertyType}</span>
+<span className="text-gray-600">Property Type</span>
+                <span className="text-gray-900 font-medium">{property.propertyType_c}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Year Built</span>
-                <span className="text-gray-900 font-medium">{property.yearBuilt}</span>
+                <span className="text-gray-900 font-medium">{property.yearBuilt_c}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Square Feet</span>
-                <span className="text-gray-900 font-medium">{property.squareFeet.toLocaleString()}</span>
+                <span className="text-gray-900 font-medium">{property.squareFeet_c?.toLocaleString()}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Price per sqft</span>
                 <span className="text-gray-900 font-medium">
-                  ${Math.round(property.price / property.squareFeet).toLocaleString()}
+                  ${Math.round(property.price_c / property.squareFeet_c).toLocaleString()}
                 </span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Listed</span>
                 <span className="text-gray-900 font-medium">
-                  {format(new Date(property.listingDate), 'MMM dd, yyyy')}
+                  {format(new Date(property.listingDate_c), 'MMM dd, yyyy')}
                 </span>
               </div>
             </div>
@@ -272,9 +281,15 @@ const PropertyDetail = () => {
                 <p className="text-sm text-gray-600">Interactive Map</p>
               </div>
             </div>
-            <div className="mt-4 text-sm text-gray-600">
-              <p>{property.address.street}</p>
-              <p>{property.address.city}, {property.address.state} {property.address.zipCode}</p>
+<div className="mt-4 text-sm text-gray-600">
+              {typeof property.address_c === 'object' ? (
+                <>
+                  <p>{property.address_c.street}</p>
+                  <p>{property.address_c.city}, {property.address_c.state} {property.address_c.zipCode}</p>
+                </>
+              ) : (
+                <p>{property.address_c}</p>
+              )}
             </div>
           </Card>
         </div>

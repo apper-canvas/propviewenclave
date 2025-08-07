@@ -67,42 +67,54 @@ const MapView = () => {
     let filtered = [...properties];
     
     // Apply search term
-    if (searchTerm) {
+if (searchTerm) {
       filtered = filtered.filter(property =>
-        property.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        property.address.city.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        property.address.state.toLowerCase().includes(searchTerm.toLowerCase())
+        property.title_c?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        property.address_c?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (typeof property.address_c === 'object' && 
+          (property.address_c?.city?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+           property.address_c?.state?.toLowerCase().includes(searchTerm.toLowerCase())))
       );
     }
     
     // Apply filters
-    if (filters.priceMin) {
-      filtered = filtered.filter(property => property.price >= parseInt(filters.priceMin));
+if (filters.priceMin) {
+      filtered = filtered.filter(property => property.price_c >= parseInt(filters.priceMin));
     }
     if (filters.priceMax) {
-      filtered = filtered.filter(property => property.price <= parseInt(filters.priceMax));
+      filtered = filtered.filter(property => property.price_c <= parseInt(filters.priceMax));
     }
     if (filters.propertyTypes.length > 0) {
-      filtered = filtered.filter(property => filters.propertyTypes.includes(property.propertyType));
+      filtered = filtered.filter(property => filters.propertyTypes.includes(property.propertyType_c));
     }
     if (filters.bedroomsMin) {
-      filtered = filtered.filter(property => property.bedrooms >= parseInt(filters.bedroomsMin));
+      filtered = filtered.filter(property => property.bedrooms_c >= parseInt(filters.bedroomsMin));
     }
     if (filters.bathroomsMin) {
-      filtered = filtered.filter(property => property.bathrooms >= parseInt(filters.bathroomsMin));
+      filtered = filtered.filter(property => property.bathrooms_c >= parseInt(filters.bathroomsMin));
     }
     if (filters.amenities.length > 0) {
-      filtered = filtered.filter(property =>
-        filters.amenities.some(amenity => property.amenities.includes(amenity))
-      );
+      filtered = filtered.filter(property => {
+        const amenities = typeof property.amenities_c === 'string' 
+          ? property.amenities_c.split(',').map(a => a.trim())
+          : Array.isArray(property.amenities_c) 
+          ? property.amenities_c 
+          : [];
+        return filters.amenities.some(amenity => amenities.includes(amenity));
+      });
     }
-    if (filters.keywords) {
-      filtered = filtered.filter(property =>
-        property.description.toLowerCase().includes(filters.keywords.toLowerCase()) ||
-        property.amenities.some(amenity => 
-          amenity.toLowerCase().includes(filters.keywords.toLowerCase())
-        )
-      );
+if (filters.keywords) {
+      filtered = filtered.filter(property => {
+        const amenities = typeof property.amenities_c === 'string' 
+          ? property.amenities_c.split(',').map(a => a.trim())
+          : Array.isArray(property.amenities_c) 
+          ? property.amenities_c 
+          : [];
+        return property.description_c?.toLowerCase().includes(filters.keywords.toLowerCase()) ||
+          amenities.some(amenity => 
+            amenity.toLowerCase().includes(filters.keywords.toLowerCase())
+          );
+      });
     }
     
     setFilteredProperties(filtered);

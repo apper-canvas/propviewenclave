@@ -49,14 +49,18 @@ const PropertyList = ({ properties, onSaveProperty, savedProperties = [] }) => {
             <Card hover className="cursor-pointer" onClick={() => handlePropertyClick(property.Id)}>
               <div className="flex flex-col sm:flex-row">
                 <div className="relative w-full sm:w-80 h-48 sm:h-auto">
-                  <img
-                    src={property.images[0]}
-                    alt={property.title}
+<img
+                    src={typeof property.images_c === 'string' 
+                      ? property.images_c.split(',')[0] || property.images_c
+                      : Array.isArray(property.images_c) 
+                      ? property.images_c[0] 
+                      : ''}
+                    alt={property.title_c}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 left-4">
                     <Badge variant="primary" className="text-white bg-primary">
-                      {property.propertyType}
+                      {property.propertyType_c}
                     </Badge>
                   </div>
                 </div>
@@ -65,10 +69,10 @@ const PropertyList = ({ properties, onSaveProperty, savedProperties = [] }) => {
                   <div className="flex items-start justify-between mb-3">
                     <div>
                       <h3 className="text-2xl font-display font-bold text-primary mb-1">
-                        {formatPrice(property.price)}
+                        {formatPrice(property.price_c)}
                       </h3>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                        {property.title}
+                        {property.title_c}
                       </h4>
                     </div>
                     <Button
@@ -83,37 +87,56 @@ const PropertyList = ({ properties, onSaveProperty, savedProperties = [] }) => {
                   
                   <div className="flex items-center text-gray-600 mb-4">
                     <ApperIcon name="MapPin" size={16} className="mr-2" />
-                    <span>{property.address.street}, {property.address.city}</span>
+                    <span>
+                      {typeof property.address_c === 'object' 
+                        ? `${property.address_c.street}, ${property.address_c.city}`
+                        : property.address_c}
+                    </span>
                   </div>
                   
-                  <div className="flex items-center space-x-6 text-gray-700 mb-4">
+<div className="flex items-center space-x-6 text-gray-700 mb-4">
                     <div className="flex items-center">
                       <ApperIcon name="Bed" size={16} className="mr-2" />
-                      <span>{property.bedrooms} bedrooms</span>
+                      <span>{property.bedrooms_c} bedrooms</span>
                     </div>
                     <div className="flex items-center">
                       <ApperIcon name="Bath" size={16} className="mr-2" />
-                      <span>{property.bathrooms} bathrooms</span>
+                      <span>{property.bathrooms_c} bathrooms</span>
                     </div>
                     <div className="flex items-center">
                       <ApperIcon name="Square" size={16} className="mr-2" />
-                      <span>{property.squareFeet.toLocaleString()} sqft</span>
+                      <span>{property.squareFeet_c?.toLocaleString()} sqft</span>
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 line-clamp-2 mb-4">
-                    {property.description}
+<p className="text-gray-600 line-clamp-2 mb-4">
+                    {property.description_c}
                   </p>
                   
                   <div className="flex flex-wrap gap-2">
-                    {property.amenities.slice(0, 3).map(amenity => (
+                    {(typeof property.amenities_c === 'string' 
+                      ? property.amenities_c.split(',').map(a => a.trim())
+                      : Array.isArray(property.amenities_c) 
+                      ? property.amenities_c 
+                      : []
+                    ).slice(0, 3).map(amenity => (
                       <Badge key={amenity} variant="secondary" className="text-xs">
                         {amenity}
                       </Badge>
                     ))}
-                    {property.amenities.length > 3 && (
+                    {(typeof property.amenities_c === 'string' 
+                      ? property.amenities_c.split(',').map(a => a.trim())
+                      : Array.isArray(property.amenities_c) 
+                      ? property.amenities_c 
+                      : []
+                    ).length > 3 && (
                       <Badge variant="default" className="text-xs">
-                        +{property.amenities.length - 3} more
+                        +{(typeof property.amenities_c === 'string' 
+                          ? property.amenities_c.split(',').map(a => a.trim())
+                          : Array.isArray(property.amenities_c) 
+                          ? property.amenities_c 
+                          : []
+                        ).length - 3} more
                       </Badge>
                     )}
                   </div>
